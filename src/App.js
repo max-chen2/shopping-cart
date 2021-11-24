@@ -4,14 +4,13 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, Link } from "react-router-dom";
 import ProductList from "./ProductList/ProductList";
 import { useState } from "react";
-import Cart from "./Cart";
 import { v4 as uuid } from "uuid";
 import products from "./products";
 import { CheckoutModal } from "./Checkout/CheckoutModal";
 import { Home } from './Home/Home'
 import { createBrowserHistory } from 'history'
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Footer } = Layout;
 const { Option } = Select;
 
 function App() {
@@ -57,8 +56,8 @@ function App() {
             style={{ padding: "24px 0" }}
           >
             <Routes>
-              <Route path="/" element={<Home />}></Route>
               <Route path="/shop" element={<ProductList addCartItem={addCartItem} setShowCheckout={setShowCheckout} removeCartItem={removeCartItem} cartItems={cartItems} products={products} />}></Route>
+              <Route path="*" element={<Home />}></Route>
             </Routes>
 
             <CheckoutModal
@@ -68,7 +67,7 @@ function App() {
             />
           </Layout>
         </Content>
-        <Footer style={{ textAlign: "center" }}>Footer</Footer>
+        <Footer style={{ textAlign: "center" }}>@Max 2021 - Prototype shopping cart application</Footer>
       </BrowserRouter>
     </Layout>
   );

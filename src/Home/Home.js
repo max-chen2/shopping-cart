@@ -30,18 +30,18 @@ export const Home = () => (
       </Col>
     </Row>
     <Descriptions title="Opening hours" layout="vertical" bordered>
-      <Descriptions.Item label="Monday">0900-1700</Descriptions.Item>
-      <Descriptions.Item label="Tuesday">0900-1700</Descriptions.Item>
-      <Descriptions.Item label="Wednesday">0900-1700</Descriptions.Item>
-      <Descriptions.Item label="Thursday">0900-1700</Descriptions.Item>
-      <Descriptions.Item label="Friday">0900-1700</Descriptions.Item>
-      <Descriptions.Item label="Saturday">0900-1700</Descriptions.Item>
-      <Descriptions.Item label="Sunday">0900-1700</Descriptions.Item>
+      <Descriptions.Item label="Monday" labelStyle={{fontWeight: 'bold'}}>0900-1700</Descriptions.Item>
+      <Descriptions.Item label="Tuesday" labelStyle={{fontWeight: 'bold'}}>0900-1700</Descriptions.Item>
+      <Descriptions.Item label="Wednesday" labelStyle={{fontWeight: 'bold'}}>0900-1700</Descriptions.Item>
+      <Descriptions.Item label="Thursday" labelStyle={{fontWeight: 'bold'}}>0900-1700</Descriptions.Item>
+      <Descriptions.Item label="Friday" labelStyle={{fontWeight: 'bold'}}>0900-1700</Descriptions.Item>
+      <Descriptions.Item label="Saturday" labelStyle={{fontWeight: 'bold'}}>0900-1700</Descriptions.Item>
+      <Descriptions.Item label="Sunday" labelStyle={{fontWeight: 'bold'}}>0900-1700</Descriptions.Item>
     </Descriptions>
     <Divider>More information</Divider>
     <Descriptions title="Shopping online" bordered>
-      <Descriptions.Item label="Text 1">text 1</Descriptions.Item>
-      <Descriptions.Item label="Text 2">text 2</Descriptions.Item>
+      <Descriptions.Item label="Text 1" labelStyle={{fontWeight: 'bold'}}>text 1</Descriptions.Item>
+      <Descriptions.Item label="Text 2" labelStyle={{fontWeight: 'bold'}}>text 2</Descriptions.Item>
     </Descriptions>
   </>
 )
