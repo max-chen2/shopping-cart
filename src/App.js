@@ -1,4 +1,4 @@
-import { Layout, Menu, Breadcrumb, Select } from "antd";
+import { Layout, Menu, Select } from "antd";
 import "antd/dist/antd.css";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, Link } from "react-router-dom";
@@ -8,6 +8,8 @@ import { v4 as uuid } from "uuid";
 import products from "./products";
 import { CheckoutModal } from "./Checkout/CheckoutModal";
 import { Home } from './Home/Home'
+import { About } from './Home/About'
+import { Services } from './Home/Services'
 import { createBrowserHistory } from 'history'
 
 const { Header, Content, Footer } = Layout;
@@ -33,11 +35,14 @@ function App() {
     <Layout>
       <BrowserRouter history={history}>
         <Header className="header">
-          <div className="logo" />
           <Menu theme="dark" mode="horizontal">
-            <Menu.Item key="1"><Link to="">LOGO</Link></Menu.Item>
+            <Menu.Item key="1"><Link to="">
+            <img height="40px" width="40px" src={process.env.PUBLIC_URL + '/logo.jpeg'} />
+              </Link></Menu.Item>
             <Menu.Item key="2"><Link to="">Home</Link></Menu.Item>
             <Menu.Item key="3"><Link to="/shop">Products</Link></Menu.Item>
+            <Menu.Item key="5"><Link to="/services">Services</Link></Menu.Item>
+            <Menu.Item key="6"><Link to="/about">About</Link></Menu.Item>
             <Menu.Item key="4" disabled>
               <Select defaultValue="en" style={{ width: 120 }} onChange={null}>
                 <Option value="en">English</Option>
@@ -47,16 +52,14 @@ function App() {
           </Menu>
         </Header>
         <Content style={{ padding: "0 30px" }}>
-          {/* <Breadcrumb style={{ margin: "16px 0" }}>
-            <Breadcrumb.Item><Link to="">Home</Link></Breadcrumb.Item>
-            <Breadcrumb.Item>Shop</Breadcrumb.Item>
-          </Breadcrumb> */}
           <Layout
             className="site-layout-background"
             style={{ padding: "24px 0" }}
           >
             <Routes>
               <Route path="/shop" element={<ProductList addCartItem={addCartItem} setShowCheckout={setShowCheckout} removeCartItem={removeCartItem} cartItems={cartItems} products={products} />}></Route>
+              <Route path="/services" element={<Services />}></Route>
+              <Route path="/about" element={<About />}></Route>
               <Route path="*" element={<Home />}></Route>
             </Routes>
 

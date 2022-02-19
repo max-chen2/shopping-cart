@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Row, Layout } from "antd";
+import { Row, Layout, Col } from "antd";
 import { useState } from 'react';
 import FilterBar from './FilterBar'
 import { ProductCard } from "./ProductCard";
@@ -34,7 +34,9 @@ const ProductList = ({ addCartItem, products, cartItems, removeCartItem, setShow
         <FilterBar filterByCategory={filterByCategory} setFilterByCategory={setFilterByCategory} sortBy={sortBy} setSortBy={setSortBy} products={products} />
         <Row>
           {sortedProducts.map((p) => (
-            <ProductCard product={p} addCartItem={addCartItem} />
+            <Col span="8">
+              <ProductCard product={p} addCartItem={addCartItem} />
+            </Col>
           ))}
         </Row>
       </Content>

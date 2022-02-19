@@ -2,7 +2,7 @@ const exported = [
   {
     productName: "Sony headset",
     languages: {
-      cn: "索尼耳机",
+      cn: "索尼耳机"
     },
     price: 120.5,
     category: "Computer accessories",
@@ -24,7 +24,6 @@ const exported = [
     languages: {
       cn: "运动鞋",
     },
-
     price: 70.2,
     category: "Sports",
     imageUrl:
@@ -35,7 +34,6 @@ const exported = [
     languages: {
       cn: "摩托车",
     },
-
     price: 17320.5,
     category: "Transport",
     imageUrl:
